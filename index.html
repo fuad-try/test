@@ -1,1 +1,453 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.5">
+	<title> </title>
+	<script src="https://unpkg.com/bwip-js@3.0.0"></script>
+	<style>
+	.stl_ sup {
+		vertical-align: baseline;
+		position: relative;
+		top: -0.4em;
+	}
+	
+	.stl_ sub {
+		vertical-align: baseline;
+		position: relative;
+		top: 0.4em;
+	}
+	
+	.stl_ a:link {
+		text-decoration: none;
+	}
+	
+	.stl_ a:visited {
+		text-decoration: none;
+	}
+	
+	@media screen and (min-device-pixel-ratio:0),
+	(-webkit-min-device-pixel-ratio:0),
+	(min--moz-device-pixel-ratio: 0) {
+		.stl_view {
+			font-size: 10em;
+			transform: scale(0.1);
+			-moz-transform: scale(0.1);
+			-webkit-transform: scale(0.1);
+			-moz-transform-origin: top left;
+			-webkit-transform-origin: top left;
+		}
+	}
+	
+	.stl_layer {}
+	
+	.stl_ie {
+		font-size: 1pt;
+	}
+	
+	.stl_ie body {
+		font-size: 12em;
+	}
+	
+	@media print {
+		.stl_view {
+			font-size: 1em;
+			transform: scale(1);
+		}
+	}
+	
+	.stl_grlink {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		z-index: 1000000;
+	}
+	
+	.stl_01 {
+		position: absolute;
+		white-space: nowrap;
+	}
+	
+	.stl_02 {
+		font-size: 1em;
+		line-height: 0.0em;
+		width: 51em;
+		height: 66em;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+		position: relative;
+		border-style: none;
+		display: block;
+		margin: 0em;
+	}
+	
+	@supports(-ms-ime-align:auto) {
+		.stl_02 {
+			overflow: hidden;
+		}
+	}
+	
+	.stl_03 {
+		position: relative;
+	}
+	
+	.stl_04 {
+		position: absolute;
+		left: 0em;
+		top: 0em;
+	}
+	
+	.stl_05 {
+		position: relative;
+		width: 51em;
+	}
+	
+	.stl_06 {
+		height: 6.6em;
+	}
+	
+	.stl_ie .stl_06 {
+		height: 66em;
+	}
+	
+	@font-face {
+		font-family: "Bangla";
+		    src: url('data:font/woff;base64,') format('woff');
+	}
+	
+	.stl_07 {
+		font-size: 0.708333em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	.stl_08 {
+		line-height: 1.095703em;
+	}
+	
+	.stl_09 {
+		letter-spacing: -0.0005em;
+	}
+	
+	.stl_ie .stl_09 {
+		letter-spacing: -0.0056px;
+	}
+	
+	.stl_10 {
+		letter-spacing: -0.001em;
+	}
+	
+	.stl_ie .stl_10 {
+		letter-spacing: -0.0111px;
+	}
+	
+	.stl_11 {
+		letter-spacing: -0.0006em;
+	}
+	
+	.stl_ie .stl_11 {
+		letter-spacing: -0.0063px;
+	}
+	
+	.stl_12 {
+		letter-spacing: -0.0004em;
+	}
+	
+	.stl_ie .stl_12 {
+		letter-spacing: -0.0048px;
+	}
+	
+	.stl_13 {
+		font-size: 1.25em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	@font-face {
+		font-family: "ArialMT";
+		src: url('data:font/woff;base64,') format('woff');
+	}
+	
+	.stl_14 {
+		font-size: 0.716667em;
+		font-family: "ArialMT";
+		color: #007700;
+	}
+	
+	.stl_15 {
+		line-height: 1.117188em;
+	}
+	
+	.stl_16 {
+		letter-spacing: -0.0002em;
+	}
+	
+	.stl_ie .stl_16 {
+		letter-spacing: -0.0028px;
+	}
+	
+	.stl_17 {
+		font-size: 0.625em;
+		font-family: "ArialMT";
+		color: #FF0000;
+	}
+	
+	.stl_18 {
+		line-height: 1.117187em;
+	}
+	
+	.stl_19 {
+		letter-spacing: -0.0003em;
+	}
+	
+	.stl_ie .stl_19 {
+		letter-spacing: -0.0027px;
+	}
+	
+	.stl_20 {
+		font-size: 0.833333em;
+		font-family: "ArialMT";
+		color: #000000;
+	}
+	
+	.stl_21 {
+		letter-spacing: 0em;
+	}
+	
+	.stl_ie .stl_21 {
+		letter-spacing: 0px;
+	}
+	
+	.stl_22 {
+		font-size: 0.833333em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	.stl_23 {
+		font-size: 0.733333em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	.stl_24 {
+		letter-spacing: -0.499em;
+	}
+	
+	.stl_ie .stl_24 {
+		letter-spacing: -5.8552px;
+	}
+	
+	.stl_25 {
+		font-size: 1.033333em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	.stl_26 {
+		letter-spacing: -0.0007em;
+	}
+	
+	.stl_ie .stl_26 {
+		letter-spacing: -0.0117px;
+	}
+	
+	.stl_27 {
+		font-size: 0.666667em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	.stl_28 {
+		font-size: 0.725em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	.stl_29 {
+		letter-spacing: 0.1532em;
+	}
+	
+	.stl_ie .stl_29 {
+		letter-spacing: 1.7769px;
+	}
+	
+	.stl_30 {
+		font-size: 0.666667em;
+		font-family: "ArialMT";
+		color: #000000;
+	}
+	
+	.stl_31 {
+		font-size: 0.583333em;
+		font-family: "ArialMT";
+		color: #000000;
+	}
+	
+	.stl_32 {
+		font-size: 0.583333em;
+		font-family: "ArialMT";
+		color: #FF0000;
+	}
+	
+	.stl_33 {
+		font-size: 0.666667em;
+		font-family: "Bangla";
+		color: #FFFFFF;
+	}
+	
+	.stl_34 {
+		letter-spacing: -0.0001em;
+	}
+	
+	.stl_ie .stl_34 {
+		letter-spacing: -0.0013px;
+	}
+	
+	.stl_35 {
+		font-size: 0.858333em;
+		font-family: "ArialMT";
+		color: #000000;
+	}
+	
+	.stl_36 {
+		font-size: 0.875em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	.stl_37 {
+		font-size: 0.75em;
+		font-family: "Bangla";
+		color: #000000;
+	}
+	
+	.stl_38 {
+		font-size: 0.75em;
+		font-family: "ArialMT";
+		color: #000000;
+	}
+	
+	.stl_39 {
+		font-size: 0.75em;
+		font-family: "ArialMT";
+		color: #FF0000;
+	}
+	
+	canvas {
+		width: 3080px;
+		/* Downscale for better quality */
+		height: 400;
+		margin-top: 160px;
+		image-rendering: crisp-edges;
+		/* Preserve barcode clarity */
+	}
+	</style>
+</head>
+
+<body>
+
+		<div class="stl_view">
+			<div class="stl_05 stl_06">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" preserveAspectRatio="xMinYMin meet" viewBox="0 0 816 1056">
+					<defs>
+						<clipPath id="1">
+							<path id="" clip-rule="evenodd" transform="matrix(1 0 0 1 0 0)" d="M0 792L0 0L0 0L612 0L612 0L612 792L612 792L0 792z" />
+						</clipPath>
+						<clipPath id="2">
+							<path id="" clip-rule="evenodd" transform="matrix(1 0 0 1 0 0)" d="M310.73 201L542.38 201L542.38 201L542.38 172L542.38 172L310.73 172z" />
+						</clipPath>
+					</defs>
+					<g transform="matrix(1.333333 0 0 1.333333 0 0)">
+						<g clip-path="url(#1)">
+							<path id="1" transform="matrix(1 0 0 -1 0 792)" d="M55.85 736L296.35 736L297.35 737L54.85 737L55.85 736" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<path id="2" transform="matrix(1 0 0 -1 0 792)" d="M296.35 736L296.35 584.06L297.35 583.06L297.35 737L296.35 736" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<path id="3" transform="matrix(1 0 0 -1 0 792)" d="M296.35 584.06L55.85 584.06L54.85 583.06L297.35 583.06L296.35 584.06" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<path id="4" transform="matrix(1 0 0 -1 0 792)" d="M55.85 584.06L55.85 736L54.85 737L54.85 583.06L55.85 584.06" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<g transform="matrix(0.3733333 0 0 0.3648649 59.35 62)">
+								<g transform="matrix(1 0 0 1 0 0)">
+									<image x="0" y="0" xlink:href="https://i.ibb.co.com/b5gP77r8/img-01.png" width="75" height="74" />
+								</g>
+							</g>
+							<g transform="matrix(0.10625 0 0 0.090625 57.85 105)">
+								<g transform="matrix(1 0 0 1 0 0)">
+									<image x="0" y="0" xlink:href="https://i.ibb.co.com/tpjmTnk1/img-02.jpg" width="480" height="640" />
+								</g>
+							</g>
+							<g transform="matrix(0.1287879 0 0 0.12 57.85 167)">
+								<g transform="matrix(1 0 0 1 0 0)">
+									<image x="0" y="0" xlink:href="https://i.ibb.co.com/MxmWZ2vk/img-03.png" width="396" height="100" />
+								</g>
+							</g>
+							<g transform="matrix(0.9273 0 0 0.8864347 110.89 103)">
+								<g transform="matrix(1 0 0 1 0 0)">
+									<image x="0" y="0" xlink:href="https://i.ibb.co.com/ns4NHj6J/img-04.png" width="200" height="115" />
+								</g>
+							</g>
+							<path id="199" transform="matrix(1 0 0 -1 0 792)" d="M55.85 689.5L296.35 689.5" stroke="#000000" stroke-width="1" fill="none" />
+							<path id="200" transform="matrix(1 0 0 -1 0 792)" d="M304.73 736L545.23 736L546.23 737L303.73 737L304.73 736" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<path id="201" transform="matrix(1 0 0 -1 0 792)" d="M545.23 736L545.23 584.06L546.23 583.06L546.23 737L545.23 736" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<path id="202" transform="matrix(1 0 0 -1 0 792)" d="M545.23 584.06L304.73 584.06L303.73 583.06L546.23 583.06L545.23 584.06" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<path id="203" transform="matrix(1 0 0 -1 0 792)" d="M304.73 584.06L304.73 736L303.73 737L303.73 583.06L304.73 584.06" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<path id="455" transform="matrix(1 0 0 -1 0 792)" d="M522.12 659.72L545.23 659.72L545.23 668.47L522.12 668.47z" stroke="none" fill="#000000" fill-rule="nonzero" />
+							<g transform="matrix(0.1464646 0 0 0.215 324.41 135.45)">
+								<g transform="matrix(1 0 0 1 0 0)">
+									<image x="0" y="0" xlink:href="https://i.ibb.co.com/5WF0VTY4/img-05.png" width="396" height="100" />
+								</g>
+							</g>
+							<path id="507" transform="matrix(1 0 0 -1 0 792)" d="M304.73 710.5L545.23 710.5" stroke="#000000" stroke-width="1" fill="none" />
+							<path id="508" transform="matrix(1 0 0 -1 0 792)" d="M304.73 659.5L545.23 659.5" stroke="#000000" stroke-width="1" fill="none" />
+						</g>
+					</g>
+				</svg>
+				<div class="stl_01" style="left:10.2208em;top:4.9398em;"><span class="stl_13 stl_08 stl_09" style="word-spacing:-0.0004em;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span></div>
+				<div class="stl_01" style="left:7.6783em;top:6.2454em;"><span class="stl_14 stl_15 stl_16" style="word-spacing:-0.0008em;">Government of the People's Republic of Bangladesh</span></div>
+				<div class="stl_01" style="left:10.9267em;top:7.1214em;"><span class="stl_17 stl_18 stl_19" style="word-spacing:0.0302em;">National ID Card </span><span class="stl_20 stl_15 stl_21" style="word-spacing:-0.0017em;">/ </span><span class="stl_22 stl_08 stl_12" style="word-spacing:-0.0002em;"> জাতীয় পরিচয় পত্র</span></div>
+				<div class="stl_01" style="left:9.6575em;top:8.9343em;z-index:109;"><span class="stl_25 stl_08 stl_16" style="word-spacing:0.7344em;">নাম: </span><span class="stl_25 stl_08 stl_26" style="font-weight:bold;word-spacing:0.0005em;">আজমল ফুয়াদ</span></div>
+				<div class="stl_01" style="left:9.6575em;top:10.7115em;"><span class="stl_30 stl_15 stl_34">Name: </span></div>
+				<div class="stl_01" style="left:12.1592em;top:10.6038em;"><span class="stl_35 stl_15 stl_26" style="word-spacing:0.0004em;">AZMAL FUAD</span></div>
+				<div class="stl_01" style="left:9.6575em;top:11.9376em;"><span class="stl_36 stl_08 stl_19" style="word-spacing:0.8178em;"> পিতা:</span></div>
+				<div class="stl_01" style="left:12.1592em;top:11.9376em;"><span class="stl_36 stl_08 stl_19" style="word-spacing:-0.0001em;">মোঃ ইসহাক আলী মিঞা</span></div>
+				<div class="stl_01" style="left:9.6575em;top:13.2709em;"><span class="stl_36 stl_08 stl_12" style="word-spacing:0.8679em;">মাতা:</span></div>
+				<div class="stl_01" style="left:12.1592em;top:13.2709em;"><span class="stl_36 stl_08 stl_12" style="word-spacing: -0.0001em;"> আসমানী বেগম</span></div>
+				<div class="stl_01" style="left:9.5742em;top:14.5627em;"><span class="stl_38 stl_15 stl_12" style="word-spacing:-0.0008em;">Date of Birth:</span> <span class="stl_39 stl_15 stl_19" style="word-spacing:-0.0003em;">02 Apr 2006</span></div>
+				<div class="stl_01" style="left:9.5742em;top:15.6927em;"><span class="stl_38 stl_15 stl_11" style="word-spacing:-0.0003em;">ID NO: </span><span class="stl_39 stl_15 stl_16" style="font-weight:bold;">8729730146</span></div>
+				<div class="stl_01" style="left:25.9775em;top:4.8622em;z-index:243;"><span class="stl_07 stl_08 stl_09" style="word-spacing:-0.0003em;">এই কার্ডটি গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের সম্পত্তি। কার্ডটি ব্যবহারকারী ব্যাতীত অন্য</span></div>
+				<div class="stl_01" style="left:25.9775em;top:5.6955em;"><span class="stl_07 stl_08 stl_12" style="word-spacing:0.02em;"> কোথাও পাওয়া গেলে নিকটস্থ পোস্ট অফিসে জমা দেবার জন্য অনুরোধ করা হলো। </span></div>
+				<div class="stl_01" style="left:25.8942em;top:6.9315em;z-index:366;"><span class="stl_23 stl_08 stl_12" style="word-spacing:0.039em;"> ঠিকানা: </span> <span class="stl_23 stl_08 stl_16" style="word-spacing:-0.0005em;">বাসা/হোল্ডিং: ১৫, গ্রাম/রাস্তা: পাঁচ ভাই ঘাট লেন, সূত্রাপুর, ডাকঘর: ঢাকা</span></div>
+				<div class="stl_01" style="left:27.729em;top:7.5981em;z-index:414;"><span class="stl_23 stl_08 stl_09" style="word-spacing:0.02em; ">সদর প্রধান - ১১০০, সুত্রাপুর, ঢাকা দক্ষিণ সিটি কর্পোরেশন, ঢাকা</span></div>
+				<div class="stl_01" style="left:25.7275em;top:9.8em;"><span class="stl_28 stl_08 stl_26" style="word-spacing:0.0004em;"> রক্তের গ্রুপ</span><span class="stl_30 stl_15 stl_21" style="word-spacing:-0.0022em;">/ </span><span class="stl_31 stl_18 stl_19" style="word-spacing:-0.0004em;">Blood Group: </span><span class="stl_32 stl_18 stl_10" style="font-weight:bold;">AB+ </span></div>
+				<div class="stl_01" style="left:43.51em;top:9.8em;z-index:457;"><span class="stl_33 stl_08 stl_16"> মূদ্রণ: ০১</span></div>
+				<div class="stl_01" style="left:25.8942em;top:12.9376em;z-index:475;"><span class="stl_36 stl_08 stl_12" style="word-spacing:-0.0002em;">প্রদানকারী কর্তৃপক্ষের স্বাক্ষর</span></div>
+				<div class="stl_01" style="left:36.7158em;top:13.0062em;"><span class="stl_37 stl_08 stl_12" style="word-spacing:-0.0001em;">প্রদানের তারিখ:</span><span class="stl_37 stl_08 stl_21" style="word-spacing:0.4em;"></span><span class="stl_37 stl_08 stl_09"> ০৪/০৩/২০২৫ </span></div>
+								<div class="stl_01" style="left:25.8942em;top:13.3em;">
+					<div id="barcode-container"></div>
+				</div>
+		</div>
+	</div>
+	<script>
+        window.onload = function() {
+            try {
+                const barcodeData = "<pin>20062698842000197</pin><name>AZMAL FUAD</name><DOB>02 Apr 2006</DOB><FP></FP><F>Right Index</F><TYPE>A</TYPE><V>2.0</V><ds>302d0215008ca873cf5e728cb0d71fea2d2632cae791ef77a802143f9527804333df56af76012bc83314dc1aae7c96</ds>";
+                
+                // Create a new canvas dynamically
+                const canvas = document.createElement('canvas');
+                document.getElementById('barcode-container').appendChild(canvas);
+                
+                // Generate barcode
+                bwipjs.toCanvas(canvas, {
+                    bcid: 'pdf417',
+                    text: barcodeData,
+                    scale: 12,
+                    height: 10,
+                    includetext: false
+                });
+
+            } catch (e) {
+                console.error("Barcode generation error: ", e);
+            }
+        };
+    </script>
+</body>
+
+</html>

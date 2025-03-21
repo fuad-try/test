@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
 <html>
-
-<head>
+	<head>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.5">
 	<title> </title>
@@ -74,7 +73,6 @@
 		line-height: 0.0em;
 		width: 51em;
 		height: 66em;
-		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 		position: relative;
 		border-style: none;
 		display: block;
@@ -112,8 +110,7 @@
 	
 	@font-face {
 		font-family: "Bangla";
-		    src: url('Bangla.woff') format('woff');
-
+		    src: url('data:font/woff;base64,') format('woff');
 	}
 	
 	.stl_07 {
@@ -334,22 +331,14 @@
 		font-family: "ArialMT";
 		color: #FF0000;
 	}
-	
-	canvas {
-		width: 3080px;
-		/* Downscale for better quality */
-		height: 400;
-		margin-top: 160px;
-		image-rendering: crisp-edges;
-		/* Preserve barcode clarity */
-	}
+		
 	</style>
 </head>
-
-<body>
-
-		<div class="stl_view">
-			<div class="stl_05 stl_06">
+	<body>
+		<div class="stl_ stl_02">
+			<div id="barcode-container" style="top:600px;"></div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" preserveAspectRatio="xMinYMin meet" viewBox="0 0 816 1056">
 					<defs>
 						<clipPath id="1">
@@ -417,38 +406,40 @@
 				<div class="stl_01" style="left:25.9775em;top:5.6955em;"><span class="stl_07 stl_08 stl_12" style="word-spacing:0.02em;"> কোথাও পাওয়া গেলে নিকটস্থ পোস্ট অফিসে জমা দেবার জন্য অনুরোধ করা হলো। </span></div>
 				<div class="stl_01" style="left:25.8942em;top:6.9315em;z-index:366;"><span class="stl_23 stl_08 stl_12" style="word-spacing:0.039em;"> ঠিকানা: </span> <span class="stl_23 stl_08 stl_16" style="word-spacing:-0.0005em;">বাসা/হোল্ডিং: ১৫, গ্রাম/রাস্তা: পাঁচ ভাই ঘাট লেন, সূত্রাপুর, ডাকঘর: ঢাকা</span></div>
 				<div class="stl_01" style="left:27.729em;top:7.5981em;z-index:414;"><span class="stl_23 stl_08 stl_09" style="word-spacing:0.02em; ">সদর প্রধান - ১১০০, সুত্রাপুর, ঢাকা দক্ষিণ সিটি কর্পোরেশন, ঢাকা</span></div>
-				<div class="stl_01" style="left:25.7275em;top:9.8em;"><span class="stl_28 stl_08 stl_26" style="word-spacing:0.0004em;"> রক্তের গ্রুপ</span><span class="stl_30 stl_15 stl_21" style="word-spacing:-0.0022em;">/ </span><span class="stl_31 stl_18 stl_19" style="word-spacing:-0.0004em;">Blood Group: </span><span class="stl_32 stl_18 stl_10" style="font-weight:bold;">AB+ </span></div>
-				<div class="stl_01" style="left:43.51em;top:9.8em;z-index:457;"><span class="stl_33 stl_08 stl_16"> মূদ্রণ: ০১</span></div>
+				<div class="stl_01" style="left:25.7275em;top:9.9em;"><span class="stl_28 stl_08 stl_26" style="word-spacing:0.0004em;"> রক্তের গ্রুপ</span><span class="stl_30 stl_15 stl_21" style="word-spacing:-0.0022em;">/ </span><span class="stl_31 stl_18 stl_19" style="word-spacing:-0.0004em;">Blood Group: </span><span class="stl_32 stl_18 stl_10" style="font-weight:bold;">AB+ </span></div>
+				<div class="stl_01" style="left:43.51em;top:9.9em;z-index:457;"><span class="stl_33 stl_08 stl_16"> মূদ্রণ: ০১</span></div>
 				<div class="stl_01" style="left:25.8942em;top:12.9376em;z-index:475;"><span class="stl_36 stl_08 stl_12" style="word-spacing:-0.0002em;">প্রদানকারী কর্তৃপক্ষের স্বাক্ষর</span></div>
 				<div class="stl_01" style="left:36.7158em;top:13.0062em;"><span class="stl_37 stl_08 stl_12" style="word-spacing:-0.0001em;">প্রদানের তারিখ:</span><span class="stl_37 stl_08 stl_21" style="word-spacing:0.4em;"></span><span class="stl_37 stl_08 stl_09"> ০৪/০৩/২০২৫ </span></div>
-								<div class="stl_01" style="left:25.8942em;top:13.3em;">
-					<div id="barcode-container"></div>
-				</div>
-		</div>
+				</div>	
+			</div>
 	</div>
+	
+	
 	<script>
         window.onload = function() {
             try {
-                const barcodeData = "<pin>20062698842000197</pin><name>AZMAL FUAD</name><DOB>02 Apr 2006</DOB><FP></FP><F>Right Index</F><TYPE>A</TYPE><V>2.0</V><ds>302d0215008ca873cf5e728cb0d71fea2d2632cae791ef77a802143f9527804333df56af76012bc83314dc1aae7c96</ds>";
+                const barcodeData = "<pin>20062698842000197</pin><name>AZMAL FUAD</name><DOB>02 Apr 2006</DOB><FP></FP><F>Right Index</F><TYPE>A</TYPE><V>2.0</V><ds>302d0215008ca873cf5e728cb0d71fea2d2632cae791ef77a802143f9527804333df56af76012bc83314dc1aae7c96</ds>";           
+      
+const canvas = document.createElement('canvas');
+canvas.style.position = "absolute";
+canvas.style.top = "225px";
+canvas.style.left = "415px";
+canvas.style.width = "308px";
+canvas.style.height = "45px";      
+document.getElementById('barcode-container').appendChild(canvas);
+document.getElementById('barcode-container').appendChild(canvas);
                 
-                // Create a new canvas dynamically
-                const canvas = document.createElement('canvas');
-                document.getElementById('barcode-container').appendChild(canvas);
-                
-                // Generate barcode
-                bwipjs.toCanvas(canvas, {
-                    bcid: 'pdf417',
-                    text: barcodeData,
-                    scale: 12,
-                    height: 10,
-                    includetext: false
+bwipjs.toCanvas(canvas, {
+bcid: 'pdf417',
+text: barcodeData,
+scale: 15,
+includetext: false
                 });
-
-            } catch (e) {
-                console.error("Barcode generation error: ", e);
+} catch (e) {
+  console.error("Barcode generation error: ", e);
             }
         };
     </script>
 </body>
 
-</html>
+</html>					
